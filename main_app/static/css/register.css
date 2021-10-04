@@ -2,17 +2,16 @@
     margin: 0px auto;
 }
 
-.container-md{
+h1{
     text-align: center;
-}
-.form_entry{
-    text-align: right;
-    border: 1px solid black;
-    padding: 30px;
-    
 }
 
 .content{
     display: flex;
     margin-top: 70px;
+}
+form{
+    text-align: right;
+    padding: 20px;
+    flex: 1;
 }
