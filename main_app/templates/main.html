@@ -1,6 +1,29 @@
 {%extends './navbase.html'%}
 {%block content%}
+{%load static%}
     <div class="container">
-        <h1>Welcome {{user.first_name}}</h1>
+        <h1 style="margin-top: 25px;">Welcome {{user.first_name}}</h1>
+        <div class="recipe-list">
+            <table class="table table-success table-dark">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chicken Alfredo</td>
+                        <td><img src="{%static 'img/login_image.jpg'%}" alt="temp" width="150px"></td>
+                        <td>View|Delete</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="generator">
+            <a href="#"><button type="button" class="btn btn-dark">Random Recipe</button></a>
+        </div>
     </div>
 {%endblock%}
