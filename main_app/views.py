@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import *
 from django.utils.text import slugify
 from users_app.models import *
+from .models import *
 from django.contrib import messages
 
 # Create your views here.
@@ -59,3 +60,9 @@ def home(request):
 def logout(request):
     request.session.clear()
     return redirect('/')
+
+def add_recipe(request):
+    context={
+        'form':Recipe_Form()
+    }
+    return render(request, 'add_recipe.html', context)

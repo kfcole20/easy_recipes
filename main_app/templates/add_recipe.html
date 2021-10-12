@@ -1,0 +1,21 @@
+{%extends './navbase.html'%}
+{%block content%}
+{%load static%}
+<div class="container">
+    <h1>Add A New Recipe</h1>
+    <div class="add_form">
+        <form action="/create_recipe" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+
+        </form>
+    </div>
+
+
+
+
+
+</div>
+
+
+{%endblock%}

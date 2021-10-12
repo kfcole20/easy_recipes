@@ -2,8 +2,11 @@
 {%block content%}
 {%load static%}
     <div class="container">
-        <h1 style="margin-top: 25px;">Welcome {{user.first_name}}</h1>
+        <h1>Welcome {{user.first_name}}</h1>
         <div class="recipe-list">
+            <div class="generator">
+                <a href="/add_recipe"><button type='button' class="btn btn-dark">Add Recipe</button></a>
+            </div><br>
             <table class="table table-success table-dark">
                 <thead>
                     <tr>
@@ -13,13 +16,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr style="vertical-align: middle;">
                         <td>Chicken Alfredo</td>
                         <td><img src="{%static 'img/login_image.jpg'%}" alt="temp" width="150px"></td>
-                        <td>View|Delete</td>
+                        <td>
+                            <a href="#"><button type="button" class="btn btn-light" style="margin-right: 5px;">View</button></a>
+                            <a href="#"><button type="button" class="btn btn-light">Delete</button></a></td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
         <div class="generator">
