@@ -62,7 +62,4 @@ def logout(request):
     return redirect('/')
 
 def add_recipe(request):
-    context={
-        'form':Recipe_Form()
-    }
-    return render(request, 'add_recipe.html', context)
+    return render(request, 'add_recipe.html')

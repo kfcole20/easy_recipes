@@ -1,5 +1,5 @@
 from django import forms
-from .models import Ingredient
+from .models import *
 from django.forms.widgets import Textarea
 
 class Login_Form(forms.Form):
@@ -13,14 +13,14 @@ class Registration_Form(forms.Form):
     password= forms.CharField(label='Password', widget=forms.PasswordInput(), min_length=8)
     confirm_password= forms.CharField(label='Confirm Password', widget=forms.PasswordInput(), min_length=8) 
 
-class Recipe_Form(forms.Form):
-    ingredients_choices=Ingredient.objects.all()
-    name= forms.CharField(label='Recipe Name', max_length=40, min_length=2)
-    description=forms.CharField(label='Description', widget=forms.Textarea(attrs={'rows':2, 'cols':40}))
-    ingredients=forms.MultipleChoiceField(
-        required=False,
-        widget=forms.CheckboxSelectMultiple,
-        choices=ingredients_choices,
-    )
+# class Recipe_Form(forms.Form):
+#     ingredients_choices=Ingredient.objects.all()
+#     name= forms.CharField(label='Recipe Name', max_length=40, min_length=2)
+#     description=forms.CharField(label='Description', widget=forms.Textarea(attrs={'rows':2, 'cols':40}))
+#     ingredient_needed=forms.MultipleChoiceField(
+#         required=False,
+#         widget=forms.CheckboxSelectMultiple,
+#         choices=ingredients_choices,
+#     )
     
     
